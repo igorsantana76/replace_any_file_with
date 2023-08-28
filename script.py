@@ -5,10 +5,10 @@ input_folder = "input"
 output_folder = "output"
 pattern = r'\{(.*?)\}'
 
-def read_all_file(fileName):
+def read_all_file(file_name):
     text_content = ""
-    if fileName.endswith(".txt"):
-        f = open(os.path.join(input_folder, fileName), 'r')
+    if file_name.endswith(".txt"):
+        f = open(os.path.join(input_folder, file_name), 'r')
         text_content += f.read()
     return text_content
 
@@ -29,6 +29,9 @@ def replace_strings_with_python(text):
     return text
 
 def main():
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+
     for file_name in os.listdir(input_folder):
         print(f"Substituindo arquivo '{file_name}':\n")
         text = read_all_file(file_name)
