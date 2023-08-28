@@ -1,0 +1,9 @@
+Exemplo de entrada {valor_a}:
+Exemplo de entrada {valor_b}:
+Exemplo de entrada {valor_c}:
+
+Replace repetido {valor_a}:
+Replace repetido {valor_b}:
+Replace repetido {valor_c}:
+
+Replace falso positivo{valor_c :
